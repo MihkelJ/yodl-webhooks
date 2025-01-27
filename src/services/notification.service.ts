@@ -13,11 +13,11 @@ export async function processNotification(
     throw createHttpError(400, `Invalid receiver address: ${receiver}`);
   }
 
-  const subscription = await prisma.subscription.findFirst({
+  const subscriptions = await prisma.subscription.findMany({
     where: { address: receiver },
   });
 
-  if (!subscription) {
+  if (subscriptions.length === 0) {
     throw createHttpError(
       400,
       `No subscription found for address: ${receiver}`
@@ -25,8 +25,31 @@ export async function processNotification(
   }
 
   const formattedAmount = `${amount} ${currency}`;
-  await sendNotification(subscription, {
-    title: "New transaction",
-    body: `Received ${formattedAmount} from ${senderName}`,
-  });
+
+  // Process notifications and track failed subscriptions
+  const results = await Promise.allSettled(
+    subscriptions.map((subscription) =>
+      sendNotification(subscription, {
+        title: "New transaction",
+        body: `Received ${formattedAmount} from ${senderName}`,
+      })
+    )
+  );
+
+  // Remove invalid subscriptions
+  const failedSubscriptions = subscriptions.filter(
+    (_, index) =>
+      results[index].status === "rejected" &&
+      results[index].reason?.statusCode === 410
+  );
+
+  if (failedSubscriptions.length > 0) {
+    await prisma.subscription.deleteMany({
+      where: {
+        id: {
+          in: failedSubscriptions.map((sub) => sub.id),
+        },
+      },
+    });
+  }
 }
