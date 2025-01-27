@@ -17,7 +17,7 @@ const config = createConfig({
   },
   cors: false,
   logger: {
-    level: "debug",
+    level: "silent",
     color: true,
   },
 });
