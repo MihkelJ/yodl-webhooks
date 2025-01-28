@@ -34,6 +34,9 @@ export const sendNotification = async (
   data: {
     title: string;
     body: string;
+    data: {
+      txHash: string;
+    };
   }
 ) => {
   const pushSubscription: PushSubscription = {

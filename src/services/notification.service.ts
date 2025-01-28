@@ -7,7 +7,8 @@ export async function processNotification(
   receiver: string,
   senderName: string,
   amount: string,
-  currency: string
+  currency: string,
+  txHash: string
 ) {
   if (!isAddress(receiver)) {
     throw createHttpError(400, `Invalid receiver address: ${receiver}`);
@@ -32,6 +33,9 @@ export async function processNotification(
       sendNotification(subscription, {
         title: "New transaction",
         body: `Received ${formattedAmount} from ${senderName}`,
+        data: {
+          txHash,
+        },
       })
     )
   );

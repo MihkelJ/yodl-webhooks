@@ -27,7 +27,8 @@ export const txWebhook = defaultEndpointsFactory
           receiver,
           senderName,
           payment.invoiceAmount,
-          payment.invoiceCurrency
+          payment.invoiceCurrency,
+          input.txHash
         );
 
         return { status: "OK", data };
