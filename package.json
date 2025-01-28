@@ -1,5 +1,5 @@
 {
-  "name": "yodl-webhooks",
+  "name": "yodl-notifications",
   "version": "0.1.0",
   "main": "public/server.js",
   "type": "module",
@@ -17,7 +17,7 @@
   ],
   "author": "MihkelJ",
   "license": "MIT",
-  "description": "Yodl Webhooks",
+  "description": "Yodl Notifications",
   "dependencies": {
     "@prisma/client": "6.2.1",
     "@types/express": "^5.0.0",

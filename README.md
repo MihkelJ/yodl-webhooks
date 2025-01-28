@@ -1,4 +1,4 @@
-# 🪝 YODL Webhooks
+# 🪝 YODL Notifications
 
 > "Yo dawg, I heard you like webhooks!" - Xzibit, probably
 
@@ -33,13 +33,13 @@ Example configuration:
 {
   "tokenSymbols": ["USDT", "USDC"],
   "webhooks": [
-    "https://yodl-webhooks.vercel.app/tx",
+    "https://yodl-notifications.vercel.app/tx",
     "http://example.com/webhook2"
   ]
 }
 ```
 
-You can already use the endpoint `https://yodl-webhooks.vercel.app/tx` as it is deployed and ready to handle your transaction webhooks.
+You can already use the endpoint `https://yodl-notifications.vercel.app/tx` as it is deployed and ready to handle your transaction webhooks.
 
 If you have a `yodl.eth` subname, you can set this up at [Just a Name](https://app.justaname.id/). Otherwise, configure it in your ENS dashboard or using your preferred ENS management tool.
 
@@ -48,8 +48,8 @@ If you have a `yodl.eth` subname, you can set this up at [Just a Name](https://a
 1. Clone this bad boy:
 
 ```bash
-git clone https://github.com/MihkelJ/yodl-webhooks.git
-cd yodl-webhooks  # Welcome to the club!
+git clone https://github.com/MihkelJ/yodl-notifications.git
+cd yodl-notifications  # Welcome to the club!
 ```
 
 2. Get those dependencies sorted:
