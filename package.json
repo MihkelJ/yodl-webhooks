@@ -27,7 +27,7 @@
     "express": "^4.21.2",
     "express-zod-api": "^22.2.0",
     "http-errors": "^2.0.0",
-    "prisma": "^6.2.1",
+    "prisma": "^6.3.0",
     "typescript": "^5.7.3",
     "viem": "^2.22.15",
     "web-push": "^3.6.7",
