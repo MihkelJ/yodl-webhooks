@@ -19,7 +19,7 @@
   "license": "MIT",
   "description": "Yodl Notifications",
   "dependencies": {
-    "@prisma/client": "6.2.1",
+    "@prisma/client": "6.3.0",
     "@types/express": "^5.0.0",
     "@types/http-errors": "^2.0.4",
     "@types/node": "^22.10.10",
