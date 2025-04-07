@@ -327,10 +327,10 @@ agent-base@^7.1.2:
   resolved "https://registry.npmjs.org/agent-base/-/agent-base-7.1.3.tgz"
   integrity sha512-jRR5wdylq8CkOe6hei19GGZnxM6rBGwFl3Bg0YItGDimvjGtAvdZk4Pu6Cl4u4Igsws4a1fd1Vq3ezrhn4KmFw==
 
-ansis@^3.2.0:
-  version "3.9.0"
-  resolved "https://registry.npmjs.org/ansis/-/ansis-3.9.0.tgz"
-  integrity sha512-PcDrVe15ldexeZMsVLBAzBwF2KhZgaU0R+CHxH+x5kqn/pO+UWVBZJ+NEXMPpEOLUFeNsnNdoWYc2gwO+MVkDg==
+ansis@^3.17.0:
+  version "3.17.0"
+  resolved "https://registry.yarnpkg.com/ansis/-/ansis-3.17.0.tgz#fa8d9c2a93fe7d1177e0c17f9eeb562a58a832d7"
+  integrity sha512-0qWUglt9JEqLFr3w1I1pbrChn1grhaiAR2ocX1PP/flRmxgtwTzPFFFnfIlD6aMOLQZgSuCRlidD70lvx8yhzg==
 
 anymatch@~3.1.2:
   version "3.1.3"
@@ -610,12 +610,12 @@ eventemitter3@5.0.1:
   resolved "https://registry.npmjs.org/eventemitter3/-/eventemitter3-5.0.1.tgz"
   integrity sha512-GWkBvjiSZK87ELrYOSESUYeVIc9mvLLf/nXalMOS5dYrgZq9o5OVkbZAVM06CVxYsCwH9BDZFPlQTlPA1j4ahA==
 
-express-zod-api@^22.2.0:
-  version "22.2.0"
-  resolved "https://registry.yarnpkg.com/express-zod-api/-/express-zod-api-22.2.0.tgz#b50876b68bf44ebf1c083c2e278bef51d25a0d8d"
-  integrity sha512-lCYJzZpEvn1OdALWVET9E3w5IsN++B/K/IUDAv+VmsQdzlZ2Agk+7hTxPYhLGRAKoThgx4GINn55jzB+q3Pjyw==
+express-zod-api@^22.13.0:
+  version "22.13.0"
+  resolved "https://registry.yarnpkg.com/express-zod-api/-/express-zod-api-22.13.0.tgz#5f6cb89988b67c8d1b6e3b0c5948e7b512de6b71"
+  integrity sha512-O9zhiNVpQUxqdTI7cTziZNHWmYAOhqCDTgBWP9TioTLrebbOCRS/7+S2vWB8Q16zvJb1uby8EXF6LQAc84+eOw==
   dependencies:
-    ansis "^3.2.0"
+    ansis "^3.17.0"
     node-mocks-http "^1.16.2"
     openapi3-ts "^4.4.0"
     ramda "^0.30.1"
